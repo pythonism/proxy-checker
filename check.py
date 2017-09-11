@@ -12,7 +12,7 @@ def bad(prox):
         open = urllib2.build_opener(handler)
         open.addheader = [('User-Agent', 'Mozilla/5.0')]
         urllib2.install_opener(open)
-        reqo = urllib2.Request("http://catsblog.tk")
+        reqo = urllib2.Request("http://google.com")
         sock = urllib2.urlopen(reqo)
     except urllib2.HTTPError, e:
         print Fore.RED + "ERROR_CODE: ", e.code
