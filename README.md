@@ -17,7 +17,7 @@ ImportError: No module named colorama
 ### How to fix it?
 **You must install the `colorama` module, you can even do it by typing in your terminal next:**
 ```SHELL
-sudo pip install colorama
+sudo pip install -r requirements.txt
 ```
 ### WARNING
 *If you didn't install , pip, do it now, coz without this, you'll never fix your problem, and 'll never install modules for* **Python** 
