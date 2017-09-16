@@ -1,7 +1,9 @@
 #!/usr/bin/env python2
 import urllib2
 from socket import setdefaulttimeout
+from os import system
 from colorama import Fore
+system("clear")
 filename = raw_input("Type the file name[]: ")
 setdefaulttimeout(100)
 file = open(filename)
