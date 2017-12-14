@@ -1,4 +1,4 @@
-# Proxy Checker
+# Proxy Checker - developed with Python 3
 Simple proxy checker powered by **Python**
 ## Usage
 **You need to have a text document with proxies. Then you must execute the script**
@@ -20,7 +20,7 @@ ImportError: No module named colorama
 sudo pip install -r requirements.txt
 ```
 ### WARNING
-*If you didn't install , pip, do it now, coz without this, you'll never fix your problem, and 'll never install modules for* **Python** 
+*If you didn't install, pip, do it now, coz without this, you'll never fix your problem, and 'll never install modules for* **Python** 
 ```SHELL
 sudo apt install python-pip
 ```

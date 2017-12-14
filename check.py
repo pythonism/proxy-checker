@@ -1,34 +1,16 @@
-#!/usr/bin/env python2
-import urllib2
-from socket import setdefaulttimeout
-from os import system
+#!/usr/bin/env python3
+from checker import checker
 from colorama import Fore
-system("clear")
-filename = raw_input("Type the file name[]: ")
-setdefaulttimeout(100)
-file = open(filename)
-proxies = list(file)
-def bad(prox):
-    try:
-        handler = urllib2.ProxyHandler({'http': prox})
-        open = urllib2.build_opener(handler)
-        open.addheader = [('User-Agent', 'Mozilla/5.0')]
-        urllib2.install_opener(open)
-        reqo = urllib2.Request("http://google.com")
-        sock = urllib2.urlopen(reqo)
-    except urllib2.HTTPError, e:
-        print Fore.RED + "ERROR_CODE: ", e.code
-        return e.code
-    except Exception, detail:
-        print Fore.RED + "ERROR: ", detail
-        return 1
-    return 0
-
-for item in proxies[:-1]:
-    if bad(item):
-        print Fore.RED + "Bad ", item
+from os import system as term
+term('clear')
+phile=input('Type the filename of text file with proxies within: [] ')
+filer=open(phile)
+filer=list(filer)
+checker=checker()
+for item in filer:
+    if checker.check(item):
+        print(Fore.RED+'Bad proxy',item)
     else:
-        print Fore.GREEN + item, " is working..."
-        f = open('good.txt', 'a')
-        f.write(item)
-        
+        phile=open('good.txt','a')
+        phile.write(item)
+        print(Fore.GREEN+'Good proxy',item)
