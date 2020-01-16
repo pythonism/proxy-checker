@@ -1,4 +1,4 @@
-# PROX v0.2
+# PROXY-CHECKER v0.2
 Proxy checker writted with Python and requests library
 
 # Usage
