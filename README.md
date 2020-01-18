@@ -1,5 +1,5 @@
 # PROXY-CHECKER v0.2
-Proxy checker writted with Python and requests library
+Simple Proxy checker written with Python
 
 # Usage
 
